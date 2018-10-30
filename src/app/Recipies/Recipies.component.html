@@ -1,10 +1,15 @@
 
     <div class="row">
         <div class="col-xs-7">
-        <app-recipies-list></app-recipies-list>
-
+        <app-recipies-list (recipiewasClicked) = "selectedRecipie = $event"></app-recipies-list>
         </div>
         <div class="col-xs-5">
-            <app-recipies-detail></app-recipies-detail>
+            <app-recipies-detail *ngIf="selectedRecipie; else thenTemplate "
+            [recip]= "selectedRecipie"></app-recipies-detail>
+            <ng-template #thenTemplate>
+                <p>Please select the Recipie!</p>
+            </ng-template>
+           
+            
         </div>
     </div>

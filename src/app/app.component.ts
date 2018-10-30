@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   loadedFeature ='recipie';
+  
  onNavigate(feature:string){
    this.loadedFeature = feature;
  }

@@ -3,8 +3,8 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <app-Recipies></app-Recipies>
-      <app-shopping></app-shopping>
+      <app-Recipies *ngIf="loadedFeature === 'recipie'"></app-Recipies>
+      <app-shopping *ngIf="loadedFeature !=='recipie'"></app-shopping>
     </div>
   </div>
 </div>
